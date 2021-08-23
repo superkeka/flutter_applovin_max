@@ -135,7 +135,6 @@ public class BannerMax extends FlutterActivity implements PlatformView, AppLovin
 
     @Override
     public void failedToReceiveAd(int errorCode) {
-        //this.Banner.loadNextAd();
         Log.e("AppLovin", "FailedToReceiveAd error sdk code " + errorCode);
         FlutterApplovinMaxPlugin.getInstance().Callback("FailedToReceiveAd");
     }

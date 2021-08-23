@@ -44,10 +44,22 @@ class BannerMaxView extends StatelessWidget {
           channel.setMethodCallHandler(
                   (MethodCall call) async => FlutterApplovinMax.handleMethod(call, listener));
         });
+
+    final UiKitView uiKitView = UiKitView(
+        viewType: '/Banner',
+        creationParams: {'Size': sizes[size], 'UnitId' : adUnitId},
+        layoutDirection: TextDirection.ltr,
+        creationParamsCodec: const StandardMessageCodec(),
+        onPlatformViewCreated: (int i) {
+          const MethodChannel channel = MethodChannel('AppLovin');
+          channel.setMethodCallHandler(
+          (MethodCall call) async => FlutterApplovinMax.handleMethod(call, listener));
+        });
+
     return Container(
       width: sizesNum[size]?.width,
       height: sizesNum[size]?.height,
-      child: Platform.isAndroid ? androidView : null
+      child: Platform.isAndroid ? androidView : uiKitView
     );
   }
 }
