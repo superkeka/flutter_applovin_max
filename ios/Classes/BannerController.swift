@@ -22,14 +22,17 @@ class BannerAdController: UIViewController, MAAdViewAdDelegate, MAAdRevenueDeleg
     {
         super.viewDidLoad()
        
-        let height: CGFloat =  types[type!]!.adaptiveSize.height
-        let width: CGFloat = UIScreen.main.bounds.width
-        
         if let adView = adView {
             adView.delegate = self
             adView.revenueDelegate = self
-            adView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+            adView.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(adView)
+            adView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true;
+            adView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true;
+            adView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true;
+            
+            adView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true;
+            adView.heightAnchor.constraint(equalToConstant: (UIDevice.current.userInterfaceIdiom == .pad) ? 90 : 50).isActive = true // Banner height on iPhone and iPad is 50 and 90, respectively
             
             adView.loadAd()
         }
