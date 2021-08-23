@@ -15,7 +15,6 @@ class BannerAdController: UIViewController, MAAdViewAdDelegate, MAAdRevenueDeleg
     func initBannerAdController(unitId: String, sizeType: String)
     {
         adView = MAAdView(adUnitIdentifier: unitId)
-        adView?.translatesAutoresizingMaskIntoConstraints = false
         type = sizeType
     }
     
@@ -24,18 +23,14 @@ class BannerAdController: UIViewController, MAAdViewAdDelegate, MAAdRevenueDeleg
         super.viewDidLoad()
        
         let height: CGFloat =  types[type!]!.adaptiveSize.height
+        let width: CGFloat = UIScreen.main.bounds.width
         
         if let adView = adView {
             adView.delegate = self
             adView.revenueDelegate = self
+            adView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             view.addSubview(adView)
-            NSLayoutConstraint.activate([
-                adView.topAnchor.constraint(equalTo: view.topAnchor),
-                adView.leftAnchor.constraint(equalTo: view.leftAnchor),
-                adView.rightAnchor.constraint(equalTo: view.rightAnchor),
-                adView.heightAnchor.constraint(equalToConstant: height),
             
-            ])
             adView.loadAd()
         }
     }
