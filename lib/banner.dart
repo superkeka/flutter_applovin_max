@@ -23,7 +23,7 @@ class BannerMaxView extends StatelessWidget {
     BannerAdSize.mrec: 'MREC'
   };
   final Map<BannerAdSize, BannerPx> sizesNum = {
-    BannerAdSize.banner:  BannerPx(350, 50),
+    BannerAdSize.banner:  BannerPx(320, 50),
     BannerAdSize.leader: BannerPx(double.infinity, 90),
     BannerAdSize.mrec: BannerPx(300, 250)
   };
@@ -57,7 +57,7 @@ class BannerMaxView extends StatelessWidget {
         });
 
     return Container(
-      width: sizesNum[size]?.width,
+      //width: sizesNum[size]?.width,
       height: sizesNum[size]?.height,
       child: Platform.isAndroid ? androidView : uiKitView
     );
