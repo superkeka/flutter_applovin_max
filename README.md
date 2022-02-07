@@ -1,4 +1,10 @@
 # flutter_applovin_max
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+   <b>Welcomes contribution from everyone.</b>  
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ioridev)  
 
 Flutter plugin for showing [applovin MAX  mediation](https://www.applovin.com/max/) ads rewardvideo (Android & Ios).
 
@@ -110,27 +116,9 @@ IOS info.plist
 ```
 ## Preparing Mediated Networks  
 ### IOS
-The following SDK is included in the ios plugin.　　
-```  
-AdColony  
-Facebook  
-InMobi  
-ByteDance  
-Smaato  
-Tapjoy  
-Vungle  
-Chartboost  
-Fyber  
-Google  
-IronSource  
-nMaio  
-MyTarget  
-TencentGDT  
-UnityAds  
-Yandex  
-```
+[https://dash.applovin.com/documentation/mediation/ios/mediation-adapters](https://dash.applovin.com/documentation/mediation/ios/mediation-adapters).
+
 ### Android
-For Android, refer to the document and add it to the app  
 [https://dash.applovin.com/documentation/mediation/android/mediation-adapters](https://dash.applovin.com/documentation/mediation/android/mediation-adapters)  
 #### important point  
 When installing the iron source, the following error is output.  
@@ -154,3 +142,26 @@ Visit [applovin MAX](https://www.applovin.com/max/) website to know more
 ## このプラグインについて  
 このプラグインは [applovin MAX](https://www.applovin.com/max/)のリワードビデオをFlutterアプリで利用できるようにネイティブSDKを統合します。
 これにより Flutter アプリでメディエーション機能を利用したリワード動画を実装できます。
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/dvird"><img src="https://avatars.githubusercontent.com/u/42498461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dvird</b></sub></a><br /><a href="https://github.com/ioridev/flutter_applovin_max/commits?author=dvird" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/superkeka"><img src="https://avatars.githubusercontent.com/u/55901716?v=4?s=100" width="100px;" alt=""/><br /><sub><b>superkeka</b></sub></a><br /><a href="https://github.com/ioridev/flutter_applovin_max/commits?author=superkeka" title="Code">💻</a></td>
+    <td align="center"><a href="http://nooralibutt.com/"><img src="https://avatars.githubusercontent.com/u/6607146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Noor Ali Butt</b></sub></a><br /><a href="https://github.com/ioridev/flutter_applovin_max/commits?author=nooralibutt" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/fujiser"><img src="https://avatars.githubusercontent.com/u/51233223?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fujiser</b></sub></a><br /><a href="#question-fujiser" title="Answering Questions">💬</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
